@@ -34,16 +34,36 @@ setTimeout(type,deleting?55:95);
 
 type();
 
+const revealTargets=document.querySelectorAll(
+"section, .section-head, .box, .stat, .skill, .project, .contact-box"
+);
+
+revealTargets.forEach((element,index)=>{
+element.classList.add("reveal");
+element.style.transitionDelay=`${Math.min(index%6,4)*70}ms`;
+});
+
+const revealObserver=new IntersectionObserver((entries)=>{
+entries.forEach((entry)=>{
+if(entry.isIntersecting){
+entry.target.classList.add("is-visible");
+revealObserver.unobserve(entry.target);
+}
+});
+},{threshold:0.14,rootMargin:"0px 0px -40px 0px"});
+
+revealTargets.forEach((element)=>revealObserver.observe(element));
+
 if(window.particlesJS){
 particlesJS("particles-js",{
 particles:{
-number:{value:170,density:{enable:true,value_area:900}},
+number:{value:70,density:{enable:true,value_area:900}},
 color:{value:"#94a3b8"},
 shape:{type:"circle"},
-opacity:{value:0.80,random:true},
-size:{value:4,random:true},
+opacity:{value:0.35,random:true},
+size:{value:3,random:true},
 line_linked:{enable:true,distance:135,color:"#64748b",opacity:0.22,width:1},
-move:{enable:true,speed:6,direction:"none",random:false,straight:false,out_mode:"out"}
+move:{enable:true,speed:2.5,direction:"none",random:false,straight:false,out_mode:"out"}
 },
 interactivity:{
 detect_on:"canvas",
