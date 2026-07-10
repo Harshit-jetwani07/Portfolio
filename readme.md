@@ -4,6 +4,8 @@ A personal portfolio website for showcasing my profile, skills, resume, and feat
 
 ## Live Portfolio
 
+Portfolio link :(https://harshit-jetwani07.github.io/Portfolio/)
+
 Portfolio repo: [Harshit-jetwani07/Portfolio](https://github.com/Harshit-jetwani07/Portfolio)
 
 ## Highlights
