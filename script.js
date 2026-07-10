@@ -35,7 +35,7 @@ setTimeout(type,deleting?55:95);
 type();
 
 const revealTargets=document.querySelectorAll(
-"section, .section-head, .box, .stat, .skill, .project, .contact-box"
+"section:not(.hero), .section-head, .box, .stat, .skill, .project, .contact-box"
 );
 
 revealTargets.forEach((element,index)=>{
